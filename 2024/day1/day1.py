@@ -5,7 +5,7 @@ similarityScore = 0
 
 with open("input.txt", "r") as file:
     for line in file:
-        elements = line.split("   ")
+        elements = line.split()
         listLeft.append(int(elements[0]))
         listRight.append(int(elements[1].strip("\n")))
 
