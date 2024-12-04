@@ -1,13 +1,13 @@
 def is_safe(my_list):
-    def check(lst):
-        asc = lst[0] < lst[1]
-        desc = lst[0] > lst[1]
-        for ele, nextEle in zip(lst, lst[1:]):
-            if asc and ele > nextEle:
+    def check(list):
+        asc = list[0] < list[1]
+        desc = list[0] > list[1]
+        for ele, next_ele in zip(list, list[1:]):
+            if asc and ele > next_ele:
                 return False
-            if desc and ele < nextEle:
+            if desc and ele < next_ele:
                 return False
-            if abs(ele - nextEle) < 1 or abs(ele - nextEle) > 3:
+            if abs(ele - next_ele) < 1 or abs(ele - next_ele) > 3:
                 return False
         return True
 
